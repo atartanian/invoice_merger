@@ -75,7 +75,7 @@ def save_quickbooks_file(headings, data):
 
     print("Saving Quickbooks .csv file: %r" % filename)
 
-    with open(filename, 'w') as csvfile:
+    with open(filename, 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, headings)
         writer.writeheader()
         for row in data:
